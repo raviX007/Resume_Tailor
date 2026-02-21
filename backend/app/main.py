@@ -49,11 +49,11 @@ app.add_middleware(
 )
 
 # Auth middleware (runs after CORS, before route handlers)
-app.add_middleware(
-    PasswordGateMiddleware,
-    username=settings.auth_username,
-    password=settings.auth_password,
-)
+# app.add_middleware(
+#     PasswordGateMiddleware,
+#     username=settings.auth_username,
+#     password=settings.auth_password,
+# )
 
 # Request ID middleware (innermost — runs closest to route handlers)
 app.add_middleware(RequestIdMiddleware)
