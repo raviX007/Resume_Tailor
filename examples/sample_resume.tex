@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\begin{document}
+
+% ─── Header ──────────────────────────────────────────────────────
+\begin{center}
+    {\LARGE \textbf{Jane Doe}} \\[4pt]
+    \href{mailto:jane.doe@email.com}{jane.doe@email.com} $\mid$
+    \href{https://github.com/janedoe}{github.com/janedoe} $\mid$
+    \href{https://linkedin.com/in/janedoe}{linkedin.com/in/janedoe} $\mid$
+    San Francisco, CA
+\end{center}
+
+% ─── Summary ─────────────────────────────────────────────────────
+\section{Summary}
+Full-Stack Developer with 2+ years of experience building web applications using Python, JavaScript, and modern frameworks. Passionate about clean code and scalable systems.
+
+% ─── Skills ──────────────────────────────────────────────────────
+\section{Technical Skills}
+\textbf{Languages:} Python, JavaScript, TypeScript, SQL \\
+\textbf{Backend:} Django, FastAPI, Node.js, Express \\
+\textbf{Frontend:} React.js, Next.js, Tailwind CSS, HTML/CSS \\
+\textbf{Databases:} PostgreSQL, Redis, MongoDB \\
+\textbf{DevOps:} Docker, GitHub Actions, AWS (EC2, S3), Nginx
+
+% ─── Experience ──────────────────────────────────────────────────
+\section{Experience}
+
+\textbf{Software Developer Intern} \hfill \textit{Acme Corp} \\
+\textit{Jun 2024 -- Dec 2024} \hfill \textit{San Francisco, CA}
+\begin{itemize}
+    \item Built a REST API serving 10K+ daily requests using Django and PostgreSQL, reducing response time by 40\%
+    \item Implemented JWT authentication and role-based access control for a multi-tenant SaaS platform
+    \item Wrote 150+ unit tests with pytest, achieving 85\% code coverage across the API layer
+    \item Set up CI/CD pipeline with GitHub Actions, cutting deployment time from 30 minutes to 5 minutes
+\end{itemize}
+
+\textbf{Freelance Web Developer} \hfill \textit{Self-Employed} \\
+\textit{Jan 2023 -- May 2024} \hfill \textit{Remote}
+\begin{itemize}
+    \item Developed 5 client websites using React.js and Next.js with Tailwind CSS
+    \item Integrated Stripe payment processing and SendGrid email notifications
+    \item Deployed applications on AWS EC2 with Docker containers and Nginx reverse proxy
+\end{itemize}
+
+% ─── Projects ────────────────────────────────────────────────────
+\section{Projects}
+
+\textbf{Real-Time Chat Application} \hfill \href{https://github.com/janedoe/chat-app}{GitHub}
+\begin{itemize}
+    \item Built a WebSocket-based chat app with Django Channels, React.js frontend, and Redis pub/sub
+    \item Implemented message persistence with PostgreSQL and real-time typing indicators
+    \item Deployed with Docker Compose on AWS EC2, supporting 100+ concurrent users
+\end{itemize}
+
+\textbf{Task Management API} \hfill \href{https://github.com/janedoe/task-api}{GitHub}
+\begin{itemize}
+    \item Designed a RESTful API with FastAPI, SQLAlchemy ORM, and PostgreSQL
+    \item Added background task processing with Celery and Redis for email notifications
+    \item Wrote comprehensive API documentation with OpenAPI/Swagger auto-generation
+\end{itemize}
+
+% ─── Education ───────────────────────────────────────────────────
+\section{Education}
+
+\textbf{B.S. Computer Science} \hfill \textit{University of California, Berkeley} \\
+\textit{Aug 2020 -- May 2024} \hfill \textit{GPA: 3.7/4.0}
+
+\end{document}

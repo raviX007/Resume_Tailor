@@ -1,0 +1,48 @@
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ── Node.js ───────────────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+
+# ── Environment / Secrets ─────────────────────────────────────────────
+.env
+.env.*
+.env*.local
+!.env.example
+
+# ── LaTeX output ──────────────────────────────────────────────────────
+backend/output/*.pdf
+backend/output/*.tex
+backend/output/*.aux
+backend/output/*.log
+backend/output/*.out
+backend/output/*.fls
+backend/output/*.fdb_latexmk
+backend/output/*.synctex.gz
+
+# ── Testing / Coverage ────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# ── IDE ───────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS ────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

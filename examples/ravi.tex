@@ -1,0 +1,176 @@
+%──────────────────────────────────────────────────────────────────
+% Ravi Raj — Resume v7 (ATS-Optimized)
+% 
+% CHANGES FROM v6:
+%   1. Summary: Rewritten as keyword-dense positioning statement
+%   2. Skills: Added LLM Agents, Agentic AI, Vector Databases, 
+%      Embeddings, Supabase, RAG spelled out, API Development
+%   3. Phone: Removed space (ATS parsing fix)
+%   4. LinkedIn/GitHub: Added visible URLs alongside labels
+%   5. Star symbol: Replaced unicode ★ with plain text
+%   6. Experience: Added tech stack per bullet naturally
+%   7. Education: Added B.E. abbreviation
+%   8. Removed "Practices" skill line (low value, wastes space)
+%
+% To use: Upload to Overleaf → compile with pdfLaTeX
+%──────────────────────────────────────────────────────────────────
+
+\documentclass[a4paper,10pt]{article}
+
+% ── Packages ──────────────────────────────────────────────────────
+\usepackage[margin=0.45in, top=0.35in, bottom=0.35in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{amssymb}
+
+% ── Colors ────────────────────────────────────────────────────────
+\definecolor{linkblue}{HTML}{0563C1}
+\definecolor{darkgray}{HTML}{333333}
+\definecolor{lightgray}{HTML}{555555}
+
+% ── Hyperlink styling ─────────────────────────────────────────────
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdfborder={0 0 0}
+}
+
+% ── Section formatting ────────────────────────────────────────────
+\titleformat{\section}
+    {\bfseries\normalsize\uppercase}  % format
+    {}                                 % label
+    {0em}                              % sep
+    {}                                 % before code
+    [\vspace{-0.6em}\rule{\textwidth}{0.5pt}] % after code (line under heading)
+
+\titlespacing*{\section}{0pt}{0.4em}{0.2em}
+
+% ── Remove page numbers ──────────────────────────────────────────
+\pagestyle{empty}
+
+% ── Bullet list styling ──────────────────────────────────────────
+\setlist[itemize]{
+    label=\textendash,
+    leftmargin=1.2em,
+    itemsep=0pt,
+    parsep=0pt,
+    topsep=1pt
+}
+
+% ── Custom commands ───────────────────────────────────────────────
+
+% Experience entry: {Role | Company}{Location}{Subtitle}{Date}
+\newcommand{\experienceentry}[4]{
+    \noindent\textbf{#1} \hfill #2 \\
+    \textit{\color{lightgray}#3} \hfill \textit{\color{lightgray}#4}
+    \vspace{2pt}
+}
+
+% Project entry: {Name}{Tech}{Links}
+\newcommand{\projectentry}[3]{
+    \noindent\textbf{#1} \hspace{0.3em}|\hspace{0.3em} {\color{lightgray}#2} \hspace{0.3em}|\hspace{0.3em} #3
+    \vspace{2pt}
+}
+
+% Skill line: {Category}{Skills}
+\newcommand{\skillline}[2]{
+    \textbf{#1:} #2
+}
+
+%══════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── HEADER ─────────────────────────────────────────────────────
+\begin{center}
+    {\LARGE\bfseries Ravi Raj} \\[4pt]
+    Bengaluru, Karnataka \enspace|\enspace +91-7481821234 \enspace|\enspace raviraj14y@gmail.com \enspace|\enspace 
+    \href{https://www.linkedin.com/in/ravi-raj-792a66221/}{linkedin.com/in/ravi-raj-792a66221} \enspace|\enspace 
+    \href{https://github.com/raviX007}{github.com/raviX007}
+\end{center}
+
+% ── SUMMARY ────────────────────────────────────────────────────
+\section{Summary}
+
+AI/LLM Engineer and Full-Stack Developer with internship experience at an enterprise SaaS company (healthcare + fintech) and freelance delivery for international clients. Built production RAG pipelines, LLM agents, and multi-agent systems using LangChain, LangGraph, and OpenAI. Backend expertise in Python, FastAPI, and Django with PostgreSQL. Frontend experience with React.js and Next.js. Based in Bengaluru.
+
+% ── TECHNICAL SKILLS ───────────────────────────────────────────
+\section{Technical Skills}
+
+\skillline{Languages}{Python, JavaScript, TypeScript} \\
+\skillline{Backend}{Django, FastAPI, Node.js, Express.js, Celery, Redis, Pydantic, REST API Design} \\
+\skillline{Frontend}{React.js, Next.js, HTML, Tailwind CSS, Streamlit} \\
+\skillline{AI / LLM}{LangChain, LangGraph, OpenAI, HuggingFace, RAG (Retrieval Augmented Generation), LLM Agents, Agentic AI, Prompt Engineering, Embeddings} \\
+\skillline{Databases}{PostgreSQL, Supabase, MongoDB, MySQL, FAISS, Qdrant, Vector Databases, SQLAlchemy, TypeORM} \\
+\skillline{DevOps \& Tools}{AWS, Docker, Git, GitHub, GitHub Actions, Linux, CI/CD, REST APIs, WebSockets, JWT}
+
+% ── EXPERIENCE ─────────────────────────────────────────────────
+\section{Experience}
+
+% --- Upwork Freelance (MOST RECENT — listed first) ---
+\experienceentry{Freelance Full Stack Developer \enspace|\enspace Upwork}{Remote}{Client: Berlin-based startup \enspace|\enspace 5.0/5.0 rating}{Jul 2025 -- Aug 2025}
+\begin{itemize}
+    \item Built and deployed a full-stack website (React.js, Node.js, Netlify) for a German startup across 3 milestones: deployment, CI/CD setup, and acceptance testing with handoff
+    \item Handled scope changes mid-project without slipping deadlines, earning two 5-star reviews --- client wrote ``a full stack developer I can strongly recommend''
+    \item Wrote detailed README and technical documentation so the client could maintain and extend the site independently
+\end{itemize}
+
+\vspace{2pt}
+
+% --- Zelthy ---
+\experienceentry{Software Developer Intern \enspace|\enspace Zelthy}{Bengaluru}{Enterprise SaaS -- Healthcare \& Fintech Products}{Jun 2024 -- Sep 2024}
+\begin{itemize}
+    \item Built an automated case management system (Django REST Framework, PostgreSQL) for Jivo (B2B medical platform) --- patient case creation on signup, treatment advice workflow for doctors, cut provider onboarding time by 30\%
+    \item Built responsive UI components (React.js) across the Jivo frontend and wired them to the Django REST backend, working with the frontend and backend teams to keep things in sync
+    \item Redesigned the role-based access control (RBAC) system in an internal Finance Application --- granular permissions for four roles across projects, estimates, and invoicing modules
+    \item Automated financial workflows (Python, Django): estimate generation, order forms, monthly subscription invoicing --- cut manual processing by 50\% while fixing critical bugs in parallel
+\end{itemize}
+
+% ── PROJECTS ───────────────────────────────────────────────────
+\section{Projects}
+
+% --- ReAct AI Agent ---
+\projectentry{ReAct AI Agent}{LangGraph, LLM APIs, Streamlit}{\href{https://github.com/raviX007/reAct-langgraph}{GitHub} \enspace|\enspace \href{https://react-langgraph-dmycxrpumlsaafkpoke8pj.streamlit.app/}{Live Demo}}
+\begin{itemize}
+    \item Built a ReAct (Reasoning + Action) agent with multi-step reasoning, tool-use orchestration, and external API calls using LangGraph
+    \item Stateful conversation system with configurable reasoning depth and full history tracking, deployed on Streamlit
+\end{itemize}
+
+\vspace{2pt}
+
+% --- Hybrid Search RAG Engine ---
+\projectentry{Hybrid Search RAG Engine}{LangChain, OpenAI, FAISS, BM25, Streamlit}{\href{https://github.com/raviX007/pdf-hybrid-search}{GitHub} \enspace|\enspace \href{https://hybridsearch-lc7gckpbxrtbf5ddoqfja2.streamlit.app/}{Live Demo}}
+\begin{itemize}
+    \item Hybrid PDF search engine --- combines BM25 keyword matching with FAISS vector similarity using a custom ranking algorithm that fuses sparse and dense retrieval scores
+    \item Real-time text extraction, configurable search parameters, and source-cited explanations so users can verify where answers come from
+\end{itemize}
+
+\vspace{2pt}
+
+% --- Web-Scraping RAG Assistant ---
+\projectentry{Web-Scraping RAG Assistant}{LangGraph, OpenAI, BeautifulSoup}{\href{https://github.com/raviX007/langgraph-webpage-rag}{GitHub} \enspace|\enspace \href{https://langgraph-webpage-rag-437bo7ynqdub7t2muvlm4o.streamlit.app/}{Live Demo}}
+\begin{itemize}
+    \item RAG pipeline that scrapes live webpages, chunks content on the fly, and answers questions with source attribution using LangGraph and OpenAI
+\end{itemize}
+
+\vspace{2pt}
+
+% --- Real-Time Chat Room (FULL-STACK PROOF) ---
+\projectentry{Real-Time Chat Room}{Django, Django Channels, React.js, PostgreSQL, WebSockets}{\href{https://github.com/raviX007/django_chat}{GitHub}}
+\begin{itemize}
+    \item Full-stack real-time chat app --- Django backend with Channels for WebSocket connections, React frontend with live message updates, PostgreSQL for persistent storage
+    \item Supports multiple chat rooms, user authentication, and message history --- end-to-end from database to UI
+\end{itemize}
+
+% ── EDUCATION ──────────────────────────────────────────────────
+\section{Education}
+
+\noindent\textbf{RNS Institute of Technology} \hfill CGPA: 8.46 / 10 \\
+\textit{\color{lightgray}Bachelor of Engineering (B.E.) -- Information Science Engineering, Bengaluru} \hfill \textit{\color{lightgray}2019 -- 2023}
+
+\end{document}
