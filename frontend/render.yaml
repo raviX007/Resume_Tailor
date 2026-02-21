@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: Resume_Tailor_frontend
+    runtime: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    dockerBuildArgs:
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
