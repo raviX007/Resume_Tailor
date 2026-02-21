@@ -13,7 +13,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # NEXT_PUBLIC_* vars are inlined at build time — must be an ARG, not runtime ENV
-ARG NEXT_PUBLIC_API_URL=http://localhost:8001
+
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 
 # next.config.ts has output: "standalone"
